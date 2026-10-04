@@ -20,6 +20,7 @@ import {
   EligibilityResult,
   PresumptiveTaxResult,
   CashSurveillanceResult,
+  AdvanceTaxResult,
 } from './engine/types';
 import { useTaxData } from './context/TaxDataContext';
 
@@ -46,6 +47,7 @@ function MainAppContent() {
     eligibility: EligibilityResult;
     cashSurveillance: CashSurveillanceResult;
     presumptive: PresumptiveTaxResult;
+    advanceTax?: AdvanceTaxResult;
   } | null>(null);
   const [lastCalculatorInput, setLastCalculatorInput] = useState<any>(null);
 

@@ -64,18 +64,33 @@ export class FirebaseAuthService implements IAuthService {
       }
     }
 
-    // Monitor Firebase Auth state changes
-    onAuthStateChanged(auth, (fbUser) => {
-      if (fbUser) {
-        const mapped = mapFirebaseUser(fbUser);
-        this.setCurrentLocalUser(mapped);
-      } else {
-        // If not authenticated via live Firebase Auth, check if local fallback session exists
-        if (!this.currentLocalUser) {
-          this.notifyListeners(null);
-        }
+    // Monitor Firebase Auth state changes safely
+    try {
+      if (auth && typeof onAuthStateChanged === 'function') {
+        onAuthStateChanged(
+          auth,
+          (fbUser) => {
+            if (fbUser) {
+              const mapped = mapFirebaseUser(fbUser);
+              this.setCurrentLocalUser(mapped);
+            } else {
+              // If not authenticated via live Firebase Auth, check if local fallback session exists
+              if (!this.currentLocalUser) {
+                this.notifyListeners(null);
+              }
+            }
+          },
+          (err) => {
+            console.warn('Firebase Auth state listener warning:', err);
+            if (!this.currentLocalUser) {
+              this.notifyListeners(null);
+            }
+          }
+        );
       }
-    });
+    } catch (err) {
+      console.warn('onAuthStateChanged subscription error:', err);
+    }
   }
 
   async signInWithGoogle(): Promise<{ success: boolean; user?: UserProfile; error?: string }> {
@@ -267,9 +282,11 @@ export class FirebaseAuthService implements IAuthService {
 
   async logout(): Promise<void> {
     try {
-      await signOut(auth);
+      if (auth && typeof signOut === 'function') {
+        await signOut(auth);
+      }
     } catch (err) {
-      console.error('Logout error:', err);
+      console.warn('Logout error (cleared local user session):', err);
     }
     this.setCurrentLocalUser(null);
   }
@@ -283,7 +300,7 @@ export class FirebaseAuthService implements IAuthService {
   }
 
   getCurrentUser(): UserProfile | null {
-    if (auth.currentUser) {
+    if (auth?.currentUser) {
       return mapFirebaseUser(auth.currentUser);
     }
     return this.currentLocalUser;

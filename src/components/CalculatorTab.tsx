@@ -384,7 +384,7 @@ export const CalculatorTab: React.FC<CalculatorTabProps> = ({
 
           <div className="flex items-center gap-2 shrink-0 self-start sm:self-auto flex-wrap">
             <button
-              onClick={openTour}
+              onClick={() => openTour()}
               className="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-2 rounded-xl text-xs transition-all shadow-sm cursor-pointer"
               title="Launch Guided Setup Tour (Pre-populates active data)"
             >

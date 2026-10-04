@@ -47,7 +47,7 @@ export const OnboardingPromptBanner: React.FC = () => {
         {/* Action Buttons */}
         <div className="flex items-center gap-2 flex-wrap w-full md:w-auto shrink-0">
           <button
-            onClick={openTour}
+            onClick={() => openTour()}
             className="flex-1 md:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md transition-all cursor-pointer"
           >
             <Play className="w-3.5 h-3.5 fill-current" />

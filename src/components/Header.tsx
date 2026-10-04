@@ -120,7 +120,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             {/* Small Tour Icon Launcher */}
             <button
-              onClick={openTour}
+              onClick={() => openTour()}
               className="px-2 py-1 bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 rounded-lg transition-all cursor-pointer shrink-0 flex items-center gap-1 text-xs font-bold"
               title="Launch Guided Setup Tour (Pre-populates your active data)"
             >
@@ -130,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             {/* Guided Setup Button */}
             <button
-              onClick={openTour}
+              onClick={() => openTour()}
               className="flex items-center gap-1 bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-1 rounded-lg border border-emerald-500/50 text-xs font-bold transition-all shadow-sm cursor-pointer shrink-0"
               title="Launch Guided Setup Wizard"
             >

@@ -23,13 +23,16 @@ export class FirestoreDatabaseService implements IDatabaseService {
    * cannot write to Firestore under zero-trust security rules.
    */
   private shouldUseLocal(userId?: string): boolean {
+    if (!db) {
+      return true;
+    }
     if (!userId) {
-      return !auth.currentUser;
+      return !auth?.currentUser;
     }
     return (
       userId.startsWith('usr_demo_') ||
-      !auth.currentUser ||
-      auth.currentUser.uid !== userId
+      !auth?.currentUser ||
+      auth?.currentUser?.uid !== userId
     );
   }
 

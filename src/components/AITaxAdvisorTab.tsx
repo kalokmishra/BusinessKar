@@ -66,10 +66,10 @@ export const AITaxAdvisorTab: React.FC<AITaxAdvisorTabProps> = ({ calculatorInpu
     const tdsClaimed = Number(data.tdsClaimed) || 0;
 
     const eligibility = evaluateEligibility({
-      entityType: data.entityType || 'INDIVIDUAL',
-      activityType: data.activityType || 'PROFESSION',
-      professionCategory: data.professionCategory,
-      businessCategory: data.businessCategory,
+      entityType: (data.entityType as any) || 'INDIVIDUAL',
+      activityType: (data.activityType as any) || 'PROFESSION',
+      professionCategory: data.professionCategory as any,
+      businessCategory: data.businessCategory as any,
       grossReceipts,
       cashReceipts,
     });
