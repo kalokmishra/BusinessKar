@@ -3,7 +3,6 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { TaxDataProvider } from './context/TaxDataContext';
 import { LoginModal } from './components/LoginModal';
 import { Header } from './components/Header';
-import { OnboardingPromptBanner } from './components/OnboardingPromptBanner';
 import { GuidedOnboardingTour } from './components/GuidedOnboardingTour';
 import { CalculatorTab } from './components/CalculatorTab';
 import { CashSurveillanceTab } from './components/CashSurveillanceTab';
@@ -101,9 +100,6 @@ function MainAppContent() {
 
       {/* Main App Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Onboarding Banner Prompt */}
-        <OnboardingPromptBanner />
-
         {activeTab === 'calculator' && (
           <CalculatorTab
             onEvaluate={handleRunEvaluation}

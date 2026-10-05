@@ -12,8 +12,6 @@ import {
   LogOut,
   Mail,
   Phone,
-  Play,
-  HelpCircle,
   Key,
   ChevronDown,
   BookOpen,
@@ -116,26 +114,6 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <BookOpen className="w-3.5 h-3.5 text-emerald-400" />
               <span>Tax Glossary</span>
-            </button>
-
-            {/* Small Tour Icon Launcher */}
-            <button
-              onClick={() => openTour()}
-              className="px-2 py-1 bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 rounded-lg transition-all cursor-pointer shrink-0 flex items-center gap-1 text-xs font-bold"
-              title="Launch Guided Setup Tour (Pre-populates your active data)"
-            >
-              <HelpCircle className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Tour</span>
-            </button>
-
-            {/* Guided Setup Button */}
-            <button
-              onClick={() => openTour()}
-              className="flex items-center gap-1 bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-1 rounded-lg border border-emerald-500/50 text-xs font-bold transition-all shadow-sm cursor-pointer shrink-0"
-              title="Launch Guided Setup Wizard"
-            >
-              <Play className="w-3 h-3 fill-current" />
-              <span>Guided Setup</span>
             </button>
 
             {currentUser && (
