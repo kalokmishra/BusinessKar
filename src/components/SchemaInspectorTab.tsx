@@ -41,10 +41,10 @@ export const SchemaInspectorTab: React.FC = () => {
           </div>
           <div>
             <h2 className="text-base font-bold text-slate-100">
-              Tax Rates & Rules Configuration (JSON Schema)
+              Tax Rates, Slabs & Law Reference
             </h2>
             <p className="text-xs text-slate-400 mt-1">
-              All tax parameters (turnover limits ₹50L/₹75L/₹2Cr/₹3Cr, tax slab brackets, cash surveillance caps 5%, SAC codes, and Advance Tax schedules) are parsed dynamically from this customizable tax rules schema payload.
+              Official statutory tax parameters for FY 2026-27 (AY 2027-28), including Section 115BAC slabs, Section 44AD/44ADA turnover caps, and 5% cash limit rules.
             </p>
           </div>
         </div>

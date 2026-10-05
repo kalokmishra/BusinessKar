@@ -374,10 +374,13 @@ export const CalculatorTab: React.FC<CalculatorTabProps> = ({
             </div>
             <div>
               <h2 className="text-base font-bold text-slate-100 flex items-center gap-2">
-                Presumptive Tax Eligibility & Regime Selector
+                <span>Presumptive Tax Eligibility & Regime Selector</span>
+                <span className="text-[10px] bg-emerald-500/15 text-emerald-300 font-semibold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  Flat-Rate Tax
+                </span>
               </h2>
               <p className="text-xs text-slate-400 mt-1">
-                Evaluates Section 44ADA (Professional 50%) and Section 44AD (Business 6%/8%) rules, cash turnover limits (₹50L / ₹75L / ₹2Cr / ₹3Cr), and compares Old vs New Tax Regime.
+                Check whether you qualify to pay tax on a fixed flat profit rate (50% for freelancers, 6%–8% for businesses) without keeping expense receipts or audit books, and compare Old vs New Regime.
               </p>
             </div>
           </div>
@@ -572,7 +575,7 @@ export const CalculatorTab: React.FC<CalculatorTabProps> = ({
         {/* Left Inputs Column */}
         <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 text-white">
           <h3 className="text-sm font-semibold text-slate-200 pb-2 border-b border-slate-800 flex items-center justify-between">
-            <span>Taxpayer Parameters</span>
+            <span>Taxpayer & Income Details</span>
             <span className="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded">
               FY 2026-27
             </span>
@@ -846,7 +849,7 @@ export const CalculatorTab: React.FC<CalculatorTabProps> = ({
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
               <div className="flex items-center justify-between">
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                  <span>Presumptive Deemed Income</span>
+                  <span>Calculated Taxable Profit (No Bookkeeping)</span>
                   <span className="text-emerald-400 lowercase font-normal">({presumptive.presumptiveRateAppliedText})</span>
                 </h4>
                 <div className="flex items-center gap-2">
@@ -992,13 +995,54 @@ export const CalculatorTab: React.FC<CalculatorTabProps> = ({
                 {onNavigateToAI && (
                   <button
                     onClick={onNavigateToAI}
-                    className="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs shadow-sm shrink-0 transition-all"
+                    className="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs shadow-sm shrink-0 transition-all cursor-pointer"
                   >
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>Get Tax Plan</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 )}
+              </div>
+
+              {/* Contextual Insights: Cash Limit Status & Advance Tax Deadline */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                {/* Cash Limit Compliance Quick Card */}
+                <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-3 text-xs space-y-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-400 font-medium">5% Cash Limit Check</span>
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${
+                      (cashSurveillance?.cashPercentage || 0) <= 5
+                        ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
+                        : 'bg-rose-500/15 text-rose-300 border border-rose-500/30'
+                    }`}>
+                      {(cashSurveillance?.cashPercentage || 0) <= 5 ? 'Compliant' : 'Audit Risk'}
+                    </span>
+                  </div>
+                  <p className="text-slate-300 font-semibold text-[11px]">
+                    {formatINR(cashReceipts)} in cash ({cashSurveillance?.cashPercentage || 0}%)
+                  </p>
+                  <p className="text-[10px] text-slate-400">
+                    {(cashSurveillance?.cashPercentage || 0) <= 5
+                      ? 'Qualifies for extended digital limit (₹75L / ₹3Cr) without tax audit.'
+                      : 'Cash exceeds 5%. Standard turnover limit (₹50L / ₹2Cr) applies.'}
+                  </p>
+                </div>
+
+                {/* Advance Tax Single Deadline Quick Card */}
+                <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-3 text-xs space-y-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-400 font-medium">Advance Tax Deadline</span>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                      March 15th
+                    </span>
+                  </div>
+                  <p className="text-slate-300 font-semibold text-[11px]">
+                    100% due on or before 15 March 2027
+                  </p>
+                  <p className="text-[10px] text-slate-400">
+                    Flat-rate taxpayers are exempt from quarterly June/Sept/Dec installments under Section 211(1)(b).
+                  </p>
+                </div>
               </div>
             </div>
           )}

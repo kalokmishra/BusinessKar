@@ -9,9 +9,10 @@
 ## 🌟 Key Features
 
 1. **Guided Onboarding Setup Wizard & Clean Zero-Default Profile (`/src/components/GuidedOnboardingTour.tsx` & `/src/context/TaxDataContext.tsx`):**
-   - Welcomes first-time users with a clean 0-value tax profile and an interactive 4-step wizard (Taxpayer Classification, Gross Turnover & Cash Receipts, Multi-Head Income & Capital Gains, and Deductions/Advance Tax).
-   - In-wizard "Load Demo Data" and "Reset All to 0" tools inside the setup modal to populate sample figures (₹48 Lakhs receipts) or reset values, keeping top-level screens uncluttered and clean.
-   - Synchronizes tax inputs seamlessly in real time across all calculation tabs (Calculator, Multi-Head, Cash Surveillance, Advance Tax, Export Invoice).
+   - Welcomes users with a clean 0-value tax profile and an interactive 4-step wizard (Taxpayer Classification, Gross Turnover & Cash Receipts, Multi-Head Income & Capital Gains, and Deductions/Advance Tax).
+   - Anchored contextually inside the **Presumptive Tax Eligibility & Regime Selector** card in the Freelance & Business Tax calculator (and user profile menu) without intrusive banners or floating clutter across pages.
+   - In-wizard "Load Demo Data" and "Reset All to 0" tools inside the setup modal to populate sample figures (₹48 Lakhs receipts) or reset values cleanly.
+   - Synchronizes tax inputs seamlessly in real time across all calculation tabs (Freelance & Business Tax, Salary & Other Incomes, Cash Limits & Audit, Advance Tax Deadlines, Invoices & LUT Export).
 
 2. **Rules-as-Code (RaC) Architecture:**
    - All tax rules, turnover limits (₹50L / ₹75L / ₹2Cr / ₹3Cr), cash threshold percentages (5.0%), slab brackets, Section 87A rebates, SAC codes, and advance tax interest rates are dynamically loaded from version-controlled `taxSchema.json`.
@@ -67,7 +68,7 @@
     - **Statutory Security Rules (`firestore.rules`):** Mathematically hardened, default-deny security rules implementing the 8 pillars of Firestore security with path variable hardening, identity integrity, and zero blanket reads.
 
 14. **AI Tax Chat Copilot (`/src/engine/aiChatCopilot.ts`, `/src/engine/indianNumberIdioms.ts` & `/src/components/AIChatPanel.tsx`):**
-    - Full-context AI assistant powered by Gemini 3.8 Flash (`@google/genai`) and server-side `/api/tax/chat` endpoint.
+    - Full-context AI assistant powered by Gemini 3.8 Flash (`@google/genai`) and server-side `/api/tax/chat` endpoint, cleanly accessible from the header and contextual action buttons without persistent floating screen clutter.
     - **Indian Numerical Idioms Pre-processing Engine (`/src/engine/indianNumberIdioms.ts`):** Mandatory pre-processing step that normalizes colloquial Indian financial shorthand (e.g. `50k` -> `50,000`, `5 lakhs` -> `5,00,000`, `1.5L` -> `1,50,000`, `2cr` -> `2,00,00,000`, `50 hazar` -> `50,000`) into exact integers before calculations. Solves common LLM shorthand misinterpretation (e.g. never mistaking `50k` for ₹50).
     - **Statutory Gift Exemption from Relatives (Section 56(2)(x)):** Automatically recognizes money or gifts received from family/relatives (e.g. *"i received 50k from my mother"*) as 100% tax-free without ceiling, confirming ₹0 additional tax and preventing wrongful addition to business turnover.
     - **Assists in Adding Entries:** Natural language recognition for incoming invoices, cash receipts, salary, capital gains, Section 80C, 80D, and Section 80CCD(1B) NPS with an interactive **"1-Click Apply to Profile"** widget.

@@ -237,10 +237,10 @@ export const ExportInvoiceTab: React.FC = () => {
           </div>
           <div>
             <h2 className="text-base font-bold text-slate-100">
-              Cross-Border Zero-Rated Export Invoice Generator & GST Engine
+              Export Invoices & GST LUT Generator
             </h2>
             <p className="text-xs text-slate-400 mt-1">
-              Auto-maps SAC Codes (e.g., 998314 for IT Consultancy), converts foreign currency (USD/EUR to INR), and auto-attaches mandatory statutory LUT disclaimer text.
+              Create GST-compliant invoices for foreign and Indian clients. Automatically attaches zero-rated GST under Letter of Undertaking (LUT) for international freelancers and converts currency to INR.
             </p>
           </div>
         </div>

@@ -28,17 +28,18 @@ Filing income tax as an Indian freelancer, independent consultant, software prof
 
 ### 1. 🧙‍♂️ Guided Onboarding Setup Wizard & Clean Zero-Default Profile
 * **Clean 0-Value Starting Profile**: Starts with 0 values so users enter their real tax data without confusion from arbitrary pre-filled defaults.
-* **Small Tour Launcher Icon & Pre-Populated Wizard**: Click the small **Tour Launcher Icon** (`HelpCircle`) or **"Guided Setup"** button anytime. If you have existing tax data, all fields in the 4-step wizard are **automatically pre-populated** with your valid numbers so you can review, update, or leave them unchanged. Completing the wizard updates the entire application state with your latest values.
+* **Contextually Anchored Setup Wizard**: The **"Guided Setup Wizard"** button is exclusively placed inside the **Presumptive Tax Eligibility & Regime Selector** panel in the Freelance & Business Tax calculator, or accessible from your user profile menu under *"Choose Your Persona Again"*. No intrusive setup banners or floating badges clutter your screen.
+* **Pre-Populated Wizard with Persona Support**: If you have existing tax data, all fields in the 4-step wizard are **automatically pre-populated** with your current numbers so you can review, update, or leave them unchanged.
 * **Interactive 4-Step Setup Wizard**:
   1. *Taxpayer Classification*: Select Individual vs HUF vs Firm, and Professional vs Business activity categories.
   2. *Gross Turnover & Cash Receipts*: Enter exact gross receipts and digital vs cash breakdown.
   3. *Multi-Head Income & Capital Gains*: Input gross salary, STCG Equity (Sec 111A 20%), LTCG Equity (Sec 112A 12.5%), and interest income.
   4. *Deductions & Advance Tax*: Specify Chapter VI-A deductions (Sec 80C/80D) and quarterly advance tax payments made.
 * **In-Wizard Reset & Demo Data Tools**:
-  * **In-Wizard Demo Data**: Click **"Load Demo Data"** directly inside the Guided Setup Tour modal (available in both header and bottom toolbar) to instantly populate realistic sample figures (₹48 Lakhs receipts, salary, capital gains) so you can review and customize entries step-by-step.
+  * **In-Wizard Demo Data**: Click **"Load Demo Data"** directly inside the Guided Setup Tour modal to instantly populate realistic sample figures (₹48 Lakhs receipts, salary, capital gains) so you can review and customize entries step-by-step.
   * **In-Wizard Reset to 0**: Click **"Reset All to 0"** inside the Guided Setup Tour wizard (featuring a clear confirmation modal) to clear all income, deduction, and advance tax fields back to clean zero values across the tour and application anytime without cluttering main screen headers.
 * **Hover-Based Field Tooltips**: Every input field across the calculator tabs features an interactive tooltip icon (`?`) that displays statutory income tax rules, section numbers, and percentage limits upon hover or touch.
-* **Interactive Tax Glossary Drawer**: Click the **"Tax Glossary"** button in the top header to open a slide-out info drawer providing plain-English definitions, statutory section references, real-world examples, and search filtering for complex tax jargon (e.g., 44ADA, Deemed Profit, 5% Cash Rule, 234C Penalty, LUT Export, Standard Deduction).
+* **Interactive Tax Glossary Drawer**: Click the **"Tax Glossary"** button in the top header to open a slide-out info drawer providing plain-English definitions, statutory section references, real-world examples, and search filtering for tax terms (e.g., 44ADA, Deemed Profit, 5% Cash Rule, 234C Penalty, LUT Export, Standard Deduction).
 * **Automatic Top Scroll Navigation**: Switching between navigation tabs automatically returns the window scroll position directly to the top of the page so you can immediately view header metrics and primary content without manual scrolling.
 * **Real-Time Cross-Tab Synchronization**: Updating tax data in the wizard or any tab automatically reflects across all calculator views simultaneously.
 
@@ -52,22 +53,25 @@ Filing income tax as an Indian freelancer, independent consultant, software prof
 
 ---
 
-### 2. 🧮 Presumptive Tax Engine Calculator (`Engine Calculator`)
-* **Section 44ADA (Specified Professionals)**:
+### 3. 🧮 Freelance & Business Tax Calculator (`Freelance & Business Tax`)
+* **Section 44ADA (Specified Professionals - 50% Flat Profit)**:
   * Designed for software developers, designers, doctors, lawyers, consultants, accountants, and creative artists.
-  * Presumptive rate: **50% of gross receipts** declared as deemed taxable profit.
+  * Flat-rate rule: Declare **50% of gross receipts** as taxable profit without maintaining expense books, bills, or accounting ledgers.
   * Turnover limit: Up to **₹50 Lakhs** (or **₹75 Lakhs** if cash receipts are ≤ 5%).
-* **Section 44AD (Small Businesses & Retailers)**:
-  * Presumptive rates: **6% on digital/banking receipts** and **8% on cash receipts**.
+* **Section 44AD (Small Businesses & Retailers - 6%/8% Flat Profit)**:
+  * Flat-rate rules: Declare **6% on digital/banking receipts** and **8% on cash receipts** as taxable income.
   * Turnover limit: Up to **₹2 Crores** (or **₹3 Crores** if cash receipts are ≤ 5%).
 * **Dynamic Regime Optimization**:
   * Calculates tax liability under both **New Tax Regime** (Finance Act 2026 slab rates with default Section 87A rebate) and **Old Tax Regime** (including Section 80C, 80D, and Chapter VI-A deductions).
   * Recommends the optimal regime with an exact breakdown of **Net Tax Savings**.
-* **1-Click PDF Tax Report**: Download an official, beautifully styled PDF summary report complete with breakdown tables and compliance stamps for your CA or bank records.
+* **Contextual Cash Limit & Advance Tax Due Date Cards**:
+  * Displays your exact cash percentage and compliance status directly alongside your calculation results.
+  * Informs you of the statutory March 15th single-deadline advance tax schedule directly under your net tax amount.
+* **1-Click PDF Tax Report & ITR-4 JSON**: Download an official, beautifully styled PDF summary report or export your e-filing JSON directly from the results card.
 
 ---
 
-### 3. 💼 Multi-Head & Salary Tax Calculator (`Multi-Head & Salary Tax`)
+### 4. 💼 Salary, Investments & Other Incomes (`Salary & Other Incomes`)
 * **Salary Income Integration**:
   * Incorporates salaried income with automatic application of the **Salaried Standard Deduction** (₹75,000 under New Regime / ₹50,000 under Old Regime).
 * **Capital Gains Special Rates Engine**:
@@ -80,38 +84,36 @@ Filing income tax as an Indian freelancer, independent consultant, software prof
 
 ---
 
-### 4. 🤖 AI Tax Advisor (`Tax Advisor`)
-* **User-Triggered AI Analysis**: Click "Run AI Analysis" or "Generate AI Tax Analysis" to generate customized statutory tax-saving strategies based on your current numbers.
-* **Gemini AI Integration**: Powered by Google DeepMind's Gemini model (with an offline rule-based fallback).
-* **Personalized Compliance Tips**: Analyzes your specific financial numbers to generate actionable advice on:
-  * Section 115BAC election strategy.
+### 5. 🤖 AI Tax Advisor (`AI Tax Advisor`)
+* **Personalized Tax Planning**: Click "Run Overview" or "Re-analyze" to generate customized statutory tax-saving strategies based on your current numbers.
+* **Actionable Compliance Advice**:
+  * Optimal Section 115BAC election strategy.
   * Cash transaction risk warnings under Section 269ST.
   * Advance Tax deadline countdowns.
-  * Business expense deduction eligibility for office laptops, software subscriptions, broadband, and travel.
-  * GST LUT filing guidelines for international freelancers.
+  * Legitimate business expense deductions (laptops, software, internet, professional tools).
+  * GST LUT filing guidance for international clients.
 
 ---
 
-### 5. ⚠️ Cash Surveillance & Banking Audit Monitor (`CashSurveillance`)
-* **SFT-005 & SFT-004 High-Value Deposit Warnings**:
-  * Tracks bank cash deposits against Income Tax Department Statement of Financial Transactions (SFT) reporting thresholds (₹10 Lakhs in savings accounts, ₹50 Lakhs in current accounts).
-* **Cash Receipt Ratio Check**:
-  * Verifies if cash receipts exceed 5% of gross turnover, which determines whether higher presumptive limits (₹75L / ₹3Cr) apply.
+### 6. ⚠️ Cash Limits & Audit Monitor (`Cash Limits & Audit`)
+* **Cash Turnover Ratio Check (5% Rule)**:
+  * Verifies if cash receipts exceed 5% of gross turnover, which determines whether higher turnover limits (₹75L / ₹3Cr) apply and protects against mandatory tax audits.
+* **SFT High-Value Deposit Guidance**:
+  * Tracks bank cash deposits against Statement of Financial Transactions (SFT) reporting thresholds (₹10 Lakhs in savings accounts, ₹50 Lakhs in current accounts).
 * **Section 269ST Violation Alert**:
-  * Warns if cash transactions exceed ₹2 Lakhs per day per event, which incurs 100% penalty under Indian tax law.
+  * Warns if any single cash transaction exceeds ₹2 Lakhs, which incurs a 100% penalty under Indian tax law.
 
 ---
 
-### 6. 📅 Advance Tax & Section 234C Penalty Simulator (`Advance Tax & 234C`)
-* **Section 211(1)(b) Presumptive Advantage**:
-  * Highlights the statutory privilege that taxpayers under Section 44AD and 44ADA are **exempt from June, September, and December quarterly installments** and can pay 100% advance tax in a single installment on or before **March 15**.
+### 7. 📅 Advance Tax Deadlines & Schedule (`Advance Tax Deadlines`)
+* **Single March 15th Payment Advantage**:
+  * Flat-rate taxpayers under Section 44AD and 44ADA enjoy the statutory privilege under Section 211(1)(b) to pay 100% advance tax in a **single installment on or before March 15**, exempt from quarterly June, September, and December Section 234C interest penalties.
 * **Interest Penalty Calculator**:
-  * Computes interest penalties under **Section 234C** (1% per month for deferment) and **Section 234B** (for tax shortfall at year-end).
-  * Displays an interactive payment schedule table showing exact due dates and amounts.
+  * Computes interest penalties under **Section 234C** (1% per month for deferment) and **Section 234B** (for tax shortfall at year-end) if applicable.
 
 ---
 
-### 7. 🌐 Export Invoice & GST LUT Generator (`Zero-Rated Export Invoice`)
+### 8. 🌐 Export Invoices & GST LUT Generator (`Invoices & LUT Export`)
 * **For Global Freelancers & Service Exporters**:
   * Generate GST-compliant Zero-Rated invoices for clients in the US, Europe, UK, Australia, Singapore, etc.
 * **LUT Declaration & 0% IGST**:
@@ -121,30 +123,30 @@ Filing income tax as an Indian freelancer, independent consultant, software prof
 
 ---
 
-### 8. 📄 Government ITR-4 (Sugam) Section Explorer, Validator & JSON Exporter (`ITR-4 JSON Mapper`)
+### 9. 📄 ITR-4 (Sugam) Return Filing & e-File Export (`ITR-4 Return Export`)
 * **Interactive Section Explorer**:
-  * Browse every section of the official ITR-4 form (Creation Metadata, Personal Info, Business & Nature Classification, Income & Presumptive Profit, Tax Computation, Advance Tax/TDS Credits, and Bank Details).
+  * Browse every section of the official ITR-4 form (Creation Metadata, Personal Info, Business & Nature Classification, Income & Flat-Rate Profit, Tax Computation, Advance Tax/TDS Credits, and Bank Details).
 * **Automated Pre-Filing Schema Validation**:
   * Real-time compliance engine (`validateITR4SchemaCompliance`) validating 10-character PAN regex, 11-character RBI IFSC bank codes, CBDT Nature of Business classification (e.g. `09028` for Software Consulting), primary bank account configuration for electronic refund credit, and Section 44ADA 50% profit floor compliance.
-* **Smart Search & Filter Bar**:
-  * Filter form sections by keyword (e.g. `"44ADA"`, `"Rebate"`, `"139(1)"`, `"PAN"`, `"IFSC"`, `"Business"`) or category.
-* **Official CBDT Filing Instructions & Step-by-Step Upload Guide**:
-  * Read official Income Tax Department field explanations and follow a 5-step checklist for uploading the generated JSON directly to `incometax.gov.in` under AY 2027-28 Offline Filing mode.
 * **1-Click Official JSON & Formal Tax Summary PDF Export**:
-  * **Formal Tax Summary PDF**: Click **"Tax Summary PDF"** in the top banner, left action panel, or JSON view to download an audit-ready, high-resolution computation statement formatted per CBDT Form ITR-4 (Sugam) statutory guidelines. The document includes Part A Assessee Profile, Schedule BP Presumptive Turnover & 5% cash compliance, Part C Total Income & Chapter VI-A deductions, Part D Tax Computation (New vs Old comparison, 87A rebate, cess, TDS credit, net payable/refund), Part E Advance Tax schedule and electronic refund bank details, and Part F Statutory Verification statement.
+  * **Formal Tax Summary PDF**: Download an audit-ready, high-resolution computation statement formatted per CBDT Form ITR-4 (Sugam) statutory guidelines.
   * **Official CBDT JSON**: Download the compiled, schema-validated JSON payload ready to upload directly to `incometax.gov.in` under AY 2027-28 without paying high CA software fees.
 
 ---
 
-### 9. 🔍 Schema & Rule Engine Inspector (`Schema Inspector`)
-* **Complete Transparency**:
-  * Inspect the underlying JSON tax rules engine (`taxSchema.json`) governing all slab calculations, cess rates, rebate limits, and presumptive thresholds.
+### 10. 🔍 Tax Rates, Slabs & Law Reference (`Tax Law & Slabs`)
+* **Complete Statutory Transparency**:
+  * Inspect the underlying JSON tax rules engine (`taxSchema.json`) governing all slab calculations, cess rates, rebate limits, and turnover thresholds.
   * Verified for **Assessment Year 2027-28 (Financial Year 2026-27)** per the latest Indian tax laws.
 
 ---
 
-### 10. 💬 AI Tax Copilot (`AI Tax Copilot`)
-Chat naturally with your personal AI tax advisor. Open the **AI Tax Copilot** panel (bottom-right floating button or header menu) anytime to:
+### 11. 💬 AI Tax Copilot (`AI Copilot`)
+Chat naturally with your personal AI tax copilot by clicking **"AI Copilot"** in the top navigation header:
+* **Clean, Dockable Drawer**: No intrusive floating pills or bouncing badges covering your inputs. Opens smoothly when requested and docks out of the way when closed.
+* **Indian Financial Shorthand Understanding**: Accurately recognizes terms like `50k`, `5 lakhs`, `1.5L`, `2cr` as exact rupee figures.
+* **Automatic Tax-Saving Rules**: Understands family gifts under Section 56(2)(x) as 100% tax-free.
+* **1-Click Profile Updates**: Review suggestions and click **"Apply to My Profile"** to sync calculations instantly.
 
 * **Speak Your Financial Life**: Type or dictate naturally in English or Hindi. "Got ₹2 lakhs from my mom," "Client paid me 50k via UPI," "Invested ₹1.5L in NPS"—the Copilot instantly converts Indian shorthand (`50k`, `5 lakhs`, `2 cr`) into precise rupee values.
 * **Automatic Tax-Saving Rules**: Mentions gifts from relatives? The Copilot recognizes they're **100% tax-exempt** (Section 56(2)(x), no limit). Client payments? Automatically categorized as business income, not gifts.
@@ -160,12 +162,12 @@ Choose the scenario that matches you. Each path shows which modules to use first
 
 | Persona | Your Situation | Quick-Start Path |
 | --- | --- | --- |
-| **🧑‍💼 Salaried Consultant** | Earn salary (₹8-50L+) + side freelance/consulting | 1. Multi-Head & Salary Tax tab → 2. Compare New vs Old Regime → 3. Download Tax Report |
-| **👨‍💻 Full-Time Software Developer** | Only freelance/contract income, no salary | 1. Engine Calculator → 2. Check if Section 44ADA applies (₹50L limit) → 3. Run AI Analysis for deductions |
-| **📈 Stock Investor + Professional** | Salary/freelance + STCG/LTCG from equity trades | 1. Multi-Head & Salary Tax tab → 2. Input capital gains in STCG/LTCG rows → 3. Check if basic exemption offsets your gains to ₹0 |
-| **🌐 International Freelancer** | Service exports to US/EU/UK clients | 1. Engine Calculator (presume 44ADA) → 2. Zero-Rated Export Invoice generator → 3. Generate LUT & FEMA compliance doc |
-| **🏬 Small Business Owner / Retailer** | Retail shop, e-commerce, services (₹50L-3Cr turnover) | 1. Engine Calculator → 2. Section 44AD (6% digital, 8% cash) → 3. Cash Surveillance monitor (stay ≤5% cash rule) |
-| **💰 First-Time Filer** | Filing your first income tax return | 1. Guided Setup Wizard (load demo data if unsure) → 2. AI Copilot ("Talk to me about my taxes") → 3. Export ITR-4 JSON & upload to incometax.gov.in |
+| **🧑‍💼 Salaried Consultant** | Earn salary (₹8-50L+) + side freelance/consulting | 1. Salary & Other Incomes tab → 2. Compare New vs Old Regime → 3. Download Tax Report |
+| **👨‍💻 Full-Time Software Developer** | Only freelance/contract income, no salary | 1. Freelance & Business Tax → 2. Check if Section 44ADA applies (₹50L limit) → 3. Review AI Tax Advisor for deductions |
+| **📈 Stock Investor + Professional** | Salary/freelance + STCG/LTCG from equity trades | 1. Salary & Other Incomes tab → 2. Input capital gains in STCG/LTCG rows → 3. Check if basic exemption offsets your gains to ₹0 |
+| **🌐 International Freelancer** | Service exports to US/EU/UK clients | 1. Freelance & Business Tax (44ADA) → 2. Invoices & LUT Export generator → 3. Generate LUT & FEMA compliance doc |
+| **🏬 Small Business Owner / Retailer** | Retail shop, e-commerce, services (₹50L-3Cr turnover) | 1. Freelance & Business Tax → 2. Section 44AD (6% digital, 8% cash) → 3. Cash Limits & Audit check (stay ≤5% cash rule) |
+| **💰 First-Time Filer** | Filing your first income tax return | 1. Guided Setup Wizard (in Eligibility panel) → 2. AI Copilot ("Help me with my tax plan") → 3. Export ITR-4 JSON & upload to incometax.gov.in |
 
 ---
 
@@ -174,7 +176,7 @@ Choose the scenario that matches you. Each path shows which modules to use first
 1. **Sign Up / Log In**:
    - Click **"Sign In with Google"** for 1-click access, or enter your Email ID / 10-digit Mobile Number, or launch a quick Demo Account.
 2. **Enter Your Numbers**:
-   - Input your gross receipts in the **Engine Calculator** or aggregate income in the **Multi-Head & Salary Tax** tab (or ask the AI Copilot to apply them for you).
+   - Input your gross receipts in **Freelance & Business Tax** or aggregate income in the **Salary & Other Incomes** tab (or launch the Guided Setup Wizard from the eligibility card).
 3. **Download Your Tax Plan & ITR-4 JSON**:
    - Review your recommended regime savings, download your PDF calculation report, and export your official ITR-4 JSON file for hassle-free e-filing!
 

@@ -34,7 +34,7 @@ The application is built as a full-stack, Rules-as-Code (RaC) web app:
 ├── src/context/                   <-- AuthContext & TaxDataContext state management
 ├── src/components/                <-- React UI components (Calculator, AIChatPanel, ITR4MapperTab, etc.)
 ├── server.ts                      <-- Express backend & Vite middleware server (Port 3000)
-└── tests/                         <-- Vitest unit test suite (48 unit tests across 10 test suites)
+└── tests/                         <-- Vitest unit test suite (55 unit tests across 11 test suites)
 ```
 
 ---

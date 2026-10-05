@@ -139,14 +139,14 @@ export const ComprehensiveTaxTab: React.FC = () => {
           <div className="flex-1">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <h2 className="text-base font-bold text-slate-100">
-                Multi-Head Income Tax Calculator (Salary + Freelance + Capital Gains)
+                Salary, Investments & Other Incomes
               </h2>
               <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/80 border border-emerald-500/30 px-2.5 py-0.5 rounded-full self-start sm:self-auto">
                 FY 2026-27 (AY 2027-28)
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-1">
-              Consolidate gross salary, freelance presumptive profits (Sec 44AD/44ADA), equity/real estate capital gains (STCG Sec 111A / LTCG Sec 112A/112), and interest income into a unified tax computation across New vs Old Tax Regimes.
+              Combine your freelance or business income with your salary, stock/mutual fund capital gains, and bank interest to calculate total tax across New vs Old Tax Regimes.
             </p>
           </div>
         </div>

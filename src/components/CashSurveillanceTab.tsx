@@ -38,10 +38,10 @@ export const CashSurveillanceTab: React.FC = () => {
           </div>
           <div>
             <h2 className="text-base font-bold text-slate-100">
-              Cash Surveillance & Statutory 5% Limit Monitor
+              Cash Turnover Limit & Audit Check (5% Rule)
             </h2>
             <p className="text-xs text-slate-400 mt-1">
-              Under Section 44AD and Section 44ADA, taxpayers are entitled to extended turnover limits (₹3 Crore / ₹75 Lakhs) ONLY if cash receipts do not exceed 5.0% of gross turnover.
+              Keep your cash receipts at or below 5% of total revenue to unlock higher turnover limits (₹75 Lakhs for freelancers, ₹3 Crore for businesses) and stay completely exempt from mandatory tax audits.
             </p>
           </div>
         </div>
@@ -51,7 +51,7 @@ export const CashSurveillanceTab: React.FC = () => {
         {/* Controls Column */}
         <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-5">
           <h3 className="text-sm font-bold text-slate-200 border-b border-slate-800 pb-2">
-            Surveillance Simulator
+            Cash Percentage Calculator
           </h3>
 
           <div>

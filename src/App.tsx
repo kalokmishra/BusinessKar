@@ -147,7 +147,7 @@ function MainAppContent() {
             {schemaMeta.disclaimer}
           </p>
           <p className="text-[10px] text-slate-600">
-            Businesskar • Income Tax & Presumptive Tax Calculator • Section 44AD & Section 44ADA
+            Businesskar • Simplified Income Tax Calculator for Freelancers & Businesses • Section 44AD & Section 44ADA
           </p>
         </div>
       </footer>

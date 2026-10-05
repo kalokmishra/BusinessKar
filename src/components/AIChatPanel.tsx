@@ -329,26 +329,9 @@ export const AIChatPanel: React.FC = () => {
     });
   };
 
-  // If closed, render launcher badge button on bottom right
+  // If closed, do not render a persistent floating button that clutters pages
   if (!isChatOpen) {
-    return (
-      <button
-        onClick={() => openChat()}
-        className="fixed bottom-5 right-5 z-40 group flex items-center gap-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white px-4 py-3 rounded-full shadow-xl shadow-emerald-950/40 border border-emerald-400/40 transition-all duration-300 hover:scale-105 cursor-pointer"
-        title="Open AI Tax Copilot (What-If Analysis & Entry Assistant)"
-      >
-        <div className="relative">
-          <Sparkles className="w-5 h-5 text-white animate-pulse" />
-          <span className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-300 rounded-full animate-ping" />
-        </div>
-        <div className="text-left">
-          <span className="text-xs font-bold block leading-none">AI Tax Copilot</span>
-          <span className="text-[10px] text-emerald-100 opacity-90 block leading-tight">
-            Minimizes Tax Outlay
-          </span>
-        </div>
-      </button>
-    );
+    return null;
   }
 
   return (

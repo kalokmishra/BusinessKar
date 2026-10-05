@@ -9,7 +9,7 @@ This document explains the technical architecture, model details, billing/cost s
 ### Q1: How does this AI Chat Panel work?
 The AI Chat Copilot is a hybrid intelligence system combining:
 1. **Frontend Interface (`/src/components/AIChatPanel.tsx`)**:
-   - Accessible via the floating bottom-right launcher button or the top navigation header.
+   - Accessible directly via the **AI Copilot** button in the header bar or contextual action buttons in the calculator (with zero persistent floating buttons cluttering the page).
    - Automatically synchronizes with the active user profile and tax state (`TaxDataContext`), including Gross Receipts, Cash Receipts %, Salary, Capital Gains, and Section 80C/80D/80CCD deductions.
    - Dispatches requests to the server-side API endpoint `POST /api/tax/chat`.
    - Renders interactive **What-If Scenario Cards**, **Proposed Profile Updates Cards** with 1-click apply, and **Numerical Idiom Normalization Badges**.

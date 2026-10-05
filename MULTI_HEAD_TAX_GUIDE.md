@@ -97,7 +97,7 @@ Many Indian freelancers and independent consultants operate with multi-source in
 * **TypeScript Types**: `CapitalGainsInput`, `ComprehensiveTaxInput`, `ComprehensiveRegimeResult`, `ComprehensiveTaxResult` in `/src/engine/types.ts`
 * **Shared State Context**: `/src/context/TaxDataContext.tsx` (synchronizes salary and capital gains state across Guided Onboarding and Tax Tabs)
 * **REST API Endpoint**: `POST /api/tax/comprehensive` in `/server.ts`
-* **Interactive UI Tab**: `Multi-Head & Salary Tax` (`/src/components/ComprehensiveTaxTab.tsx`)
+* **Interactive UI Tab**: `Salary & Other Incomes` (`/src/components/ComprehensiveTaxTab.tsx`)
 * **AI Chat Copilot Integration**: `/src/engine/aiChatCopilot.ts` & `/src/components/AIChatPanel.tsx` (enables natural language multi-head entry addition and what-if analysis with 1-click apply)
 * **Unit Tests**: `/tests/comprehensiveTax.test.ts` & `/tests/aiChatCopilot.test.ts` (100% test coverage)
 

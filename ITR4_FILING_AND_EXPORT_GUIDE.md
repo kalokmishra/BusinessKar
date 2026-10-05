@@ -16,7 +16,7 @@ This guide documents the statutory requirements, architecture, pre-filing valida
 - **Section 44ADA (Specified Professionals)**:
   - Gross professional receipts: Up to **₹50 Lakhs** (extended to **₹75 Lakhs** where cash receipts do not exceed 5%).
   - Minimum statutory deemed profit rate: **50%** of gross professional receipts.
-  - Advance Tax schedule: Standard 4 quarterly installments (June 15, Sept 15, Dec 15, March 15).
+  - Advance Tax schedule: Statutory single 100% installment on or before **March 15** under Section 211(1)(b).
 - **Default Tax Regime**:
   - For AY 2027-28 (FY 2026-27), the **New Tax Regime under Section 115BAC** is the default statutory regime.
   - Rebate under Section 87A provides **zero tax liability** for taxable income up to **₹7,00,000** in the New Regime.
@@ -26,7 +26,7 @@ This guide documents the statutory requirements, architecture, pre-filing valida
 
 ## 2. Formal ITR-4 Tax Summary Document (PDF Export)
 
-The **ITR-4 Section Explorer & JSON Generator** (`ITR4MapperTab.tsx`) includes an export engine (`generateITR4SummaryPdf` in `src/utils/pdfExporter.ts`) that generates a formal, high-resolution computation statement formatted per CBDT Form ITR-4 standards.
+The **ITR-4 Return Filing & e-File Export** tab (`ITR4MapperTab.tsx`) includes an export engine (`generateITR4SummaryPdf` in `src/utils/pdfExporter.ts`) that generates a formal, high-resolution computation statement formatted per CBDT Form ITR-4 standards.
 
 ### Summary Document Sections
 
@@ -41,7 +41,7 @@ The **ITR-4 Section Explorer & JSON Generator** (`ITR4MapperTab.tsx`) includes a
 | **PART F: Statutory Verification** | Formal Rule 12 verification statement: *"I solemnly declare that to the best of my knowledge and belief, the details provided in this return computation are correct and complete..."* with verification date and assessee signature block. | Certified legal signature block |
 
 ### How to Download the PDF
-1. Navigate to the **ITR-4 JSON Mapper** tab.
+1. Navigate to the **ITR-4 Return Export** tab.
 2. Ensure your PAN, Name, Business Code, Trade Name, and Bank Details are filled in or loaded from your profile.
 3. Click any of the **"Tax Summary PDF"** buttons:
    - In the **Top Banner** action bar.

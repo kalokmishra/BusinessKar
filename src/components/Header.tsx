@@ -57,14 +57,14 @@ export const Header: React.FC<HeaderProps> = ({
   }, []);
 
   const tabs = [
-    { id: 'calculator', label: 'Engine Calculator', icon: Calculator },
-    { id: 'comprehensive', label: 'Multi-Head & Salary Tax', icon: Briefcase },
-    { id: 'ai-advisor', label: 'Tax Advisor', icon: Sparkles },
-    { id: 'surveillance', label: 'Cash Surveillance', icon: AlertTriangle },
-    { id: 'advancetax', label: 'Advance Tax & 234C', icon: Calendar },
-    { id: 'invoice', label: 'GST & LUT Export', icon: FileSpreadsheet },
-    { id: 'itr4', label: 'ITR-4 JSON Schema', icon: FileText },
-    { id: 'rac', label: 'Tax Rules & Config', icon: Code2 },
+    { id: 'calculator', label: 'Freelance & Business Tax', icon: Calculator },
+    { id: 'comprehensive', label: 'Salary & Other Incomes', icon: Briefcase },
+    { id: 'advancetax', label: 'Advance Tax Deadlines', icon: Calendar },
+    { id: 'surveillance', label: 'Cash Limits & Audit', icon: AlertTriangle },
+    { id: 'itr4', label: 'ITR-4 Return Export', icon: FileText },
+    { id: 'invoice', label: 'Invoices & LUT Export', icon: FileSpreadsheet },
+    { id: 'ai-advisor', label: 'AI Tax Advisor', icon: Sparkles },
+    { id: 'rac', label: 'Tax Law & Slabs', icon: Code2 },
   ];
 
   return (
@@ -89,7 +89,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 truncate mt-0.5">
-                Income Tax & Presumptive Tax Calculator for Freelancers & Small Businesses
+                Simplified Income Tax & Regime Calculator for Freelancers & Small Businesses
               </p>
             </div>
           </div>

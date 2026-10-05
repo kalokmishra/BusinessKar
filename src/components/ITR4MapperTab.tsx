@@ -454,14 +454,14 @@ export const ITR4MapperTab: React.FC<ITR4MapperTabProps> = ({
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <h2 className="text-base font-bold text-slate-100">
-                  Government ITR-4 (Sugam) Section Explorer & Document Exporter
+                  ITR-4 (Sugam) Return Filing & e-File Export
                 </h2>
                 <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/80 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
                   AY 2027-28 (FY 2026-27)
                 </span>
               </div>
               <p className="text-xs text-slate-400 mt-1">
-                Search ITR-4 form sections, verify statutory rules, and export your calculated tax summary as a formal computation PDF or official e-filing JSON.
+                Review each section of your ITR-4 tax return, verify figures, and download your official JSON file ready to upload directly to the Income Tax e-Filing portal.
               </p>
             </div>
           </div>

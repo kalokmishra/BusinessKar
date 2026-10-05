@@ -58,10 +58,10 @@ export const AdvanceTaxTab: React.FC = () => {
           </div>
           <div>
             <h2 className="text-base font-bold text-slate-100">
-              Advance Tax Quarterly Schedule & Section 234C Planner
+              Advance Tax Deadlines & Schedule (Sec 234C / 234B)
             </h2>
             <p className="text-xs text-slate-400 mt-1">
-              Computes quarterly installment targets and evaluates Section 234C and 234B interest penalties. Presumptive taxpayers under 44AD/44ADA enjoy Section 211 single March 15 deadline benefits.
+              Calculate your advance tax deadlines and check late-payment interest. If you use flat-rate tax (44AD / 44ADA), you only need to pay once on or before March 15th instead of 4 quarterly installments.
             </p>
           </div>
         </div>
